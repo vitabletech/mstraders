@@ -1,0 +1,62 @@
+.header {
+    background-color: var(--dark-brown);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.statItem {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-gray);
+    border-radius: 12px;
+}
+
+.statNumber {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    font-weight: 600;
+    color: var(--dark-brown);
+}
+
+.mission {
+    background-color: var(--dark-brown);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.missionTitle {
+    color: var(--primary-orange);
+    margin-bottom: 1.5rem;
+}
