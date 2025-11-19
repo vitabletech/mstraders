@@ -9,6 +9,19 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
     transition: all 0.3s ease;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .container {
@@ -27,6 +40,24 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logoImage {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo:hover .logoImage {
+    filter: drop-shadow(0 4px 8px rgba(200, 106, 46, 0.3));
+    transform: rotate(-2deg);
 }
 
 .logo span {
@@ -39,15 +70,57 @@
     list-style: none;
 }
 
+.navLinks li {
+    animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.navLinks li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.navLinks li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.navLinks li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.navLinks li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.navLinks li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.navLinks li:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .navLink {
     font-weight: 500;
     color: var(--dark-brown);
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
+    padding: 0.5rem 0;
 }
 
 .navLink:hover {
     color: var(--primary-orange);
+    transform: translateY(-2px);
 }
 
 .navLink::after {
@@ -55,14 +128,19 @@
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--primary-orange);
-    transition: width 0.3s ease;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(90deg, var(--primary-orange), var(--deep-red));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .navLink:hover::after {
     width: 100%;
+}
+
+.cta {
+    animation: fadeInUp 0.5s ease-out 0.7s backwards;
 }
 
 .mobileMenuBtn {
@@ -72,6 +150,7 @@
     cursor: pointer;
     flex-direction: column;
     gap: 6px;
+    padding: 0.5rem;
 }
 
 .bar {
@@ -79,6 +158,11 @@
     height: 3px;
     background-color: var(--dark-brown);
     transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.mobileMenuBtn:hover .bar {
+    background-color: var(--primary-orange);
 }
 
 .mobileMenu {
@@ -104,6 +188,41 @@
     gap: 1.5rem;
     list-style: none;
     text-align: center;
+}
+
+.mobileNavLinks li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+}
+
+.mobileMenu.open .mobileNavLinks li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobileMenu.open .mobileNavLinks li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.mobileMenu.open .mobileNavLinks li:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.mobileMenu.open .mobileNavLinks li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.mobileMenu.open .mobileNavLinks li:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+.mobileMenu.open .mobileNavLinks li:nth-child(5) {
+    transition-delay: 0.3s;
+}
+
+.mobileMenu.open .mobileNavLinks li:nth-child(6) {
+    transition-delay: 0.35s;
 }
 
 @media (max-width: 768px) {

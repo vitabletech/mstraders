@@ -3,8 +3,11 @@ import Image from 'next/image';
 import styles from './gallery.module.css';
 
 export const metadata = {
-    title: "Gallery | MS Traders",
-    description: "View our completed projects and product gallery.",
+    title: "Project Gallery | MS Traders Completed Projects",
+    description: "View our portfolio of completed Petrol Pump Canopies, Driveways, and Lighting projects across Madhya Pradesh.",
+    alternates: {
+        canonical: '/gallery',
+    },
 };
 
 export default function Gallery() {
@@ -59,9 +62,12 @@ export default function Gallery() {
                 }}>
                     <h2 className="section-title" style={{ color: 'white' }}>3D Virtual Tour</h2>
                     <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.8)' }}>Experience our projects in immersive 3D.</p>
-                    <Link href="/virtual-tour" className="btn btn-primary" style={{ marginTop: '1rem' }}>
+                    {/* <Link href="/virtual-tour" className="btn btn-primary" style={{ marginTop: '1rem' }}>
                         Launch 3D Gallery
-                    </Link>
+                    </Link> */}
+                    <button className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }} disabled>
+                        Launch 3D Gallery (Coming Soon)
+                    </button>
                 </div>
             </div>
         </>

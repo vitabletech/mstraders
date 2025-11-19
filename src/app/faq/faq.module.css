@@ -1,0 +1,146 @@
+.header {
+    background: linear-gradient(135deg, #2A1F1B 0%, #1a1210 100%);
+    color: white;
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.faqSection {
+    padding: 6rem 0;
+    background: var(--light-gray);
+}
+
+.categorySection {
+    margin-bottom: 4rem;
+}
+
+.categoryTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-orange);
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faqItem {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.faqItem:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faqQuestion {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: white;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faqQuestion:hover {
+    background: rgba(200, 106, 46, 0.05);
+}
+
+.faqQuestion.active {
+    background: rgba(200, 106, 46, 0.1);
+    color: var(--primary-orange);
+}
+
+.icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-orange);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.faqQuestion.active .icon {
+    transform: rotate(180deg);
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: white;
+}
+
+.faqAnswer.open {
+    max-height: 500px;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.faqAnswer p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.ctaBox {
+    background: linear-gradient(135deg, #C86A2E 0%, #A43C2F 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 4rem;
+    box-shadow: 0 8px 24px rgba(200, 106, 46, 0.3);
+}
+
+.ctaBox h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ctaBox p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 4rem 0 3rem;
+    }
+
+    .categoryTitle {
+        font-size: 1.5rem;
+    }
+
+    .faqQuestion {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .faqAnswer.open {
+        padding: 0 1.5rem 1.2rem 1.5rem;
+    }
+
+    .ctaBox {
+        padding: 2rem 1.5rem;
+    }
+
+    .ctaBox h3 {
+        font-size: 1.5rem;
+    }
+}

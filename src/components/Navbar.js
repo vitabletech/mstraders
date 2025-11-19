@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    MS <span>TRADERS</span>
+                    <img src="/ms-traders-logo.png" alt="MS Traders Logo" className={styles.logoImage} />
                 </Link>
 
                 <ul className={styles.navLinks}>
@@ -22,6 +22,7 @@ const Navbar = () => {
                     <li><Link href="/services" className={styles.navLink}>Services</Link></li>
                     <li><Link href="/about" className={styles.navLink}>About Us</Link></li>
                     <li><Link href="/gallery" className={styles.navLink}>Gallery</Link></li>
+                    <li><Link href="/faq" className={styles.navLink}>FAQ</Link></li>
                     <li><Link href="/contact" className={styles.navLink}>Contact</Link></li>
                 </ul>
 
@@ -42,6 +43,7 @@ const Navbar = () => {
                     <li><Link href="/services" onClick={toggleMenu}>Services</Link></li>
                     <li><Link href="/about" onClick={toggleMenu}>About Us</Link></li>
                     <li><Link href="/gallery" onClick={toggleMenu}>Gallery</Link></li>
+                    <li><Link href="/faq" onClick={toggleMenu}>FAQ</Link></li>
                     <li><Link href="/contact" onClick={toggleMenu}>Contact</Link></li>
                 </ul>
             </div>

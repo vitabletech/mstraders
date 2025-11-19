@@ -1,14 +1,23 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import styles from '../app/contact/contact.module.css';
 
 const ContactForm = () => {
+    const searchParams = useSearchParams();
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
         service: '',
         message: ''
     });
+
+    useEffect(() => {
+        const serviceParam = searchParams.get('service');
+        if (serviceParam) {
+            setFormData(prev => ({ ...prev, service: serviceParam }));
+        }
+    }, [searchParams]);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });

@@ -16,11 +16,11 @@ export default function Home() {
     <>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={`${styles.heroTitle} animate-fade-in`}>
+          <h1 className={styles.heroTitle}>
             Building Excellence with <span>MS Traders</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            Your trusted partner for Petrol Pump Canopies, Driveways, and Industrial Solutions.
+            Your trusted petrol pump contractor for complete setup solutions - Canopies, Driveways, Lighting, and Infrastructure.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/services" className="btn btn-primary">Explore Services</Link>
@@ -79,9 +79,12 @@ export default function Home() {
                   <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '2rem' }}>
                     Walk through our virtual showroom and explore our products in 3D.
                   </p>
-                  <Link href="/virtual-tour" className="btn btn-primary">
+                  {/* <Link href="/virtual-tour" className="btn btn-primary">
                     Launch Virtual Tour
-                  </Link>
+                  </Link> */}
+                  <button className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }} disabled>
+                    Coming Soon
+                  </button>
                 </div>
               </div>
 
@@ -105,26 +108,39 @@ export default function Home() {
       <section className={`${styles.section} ${styles.bgLight}`}>
         <div className="container">
           <h2 className="section-title">Why Choose MS Traders?</h2>
+          <p className="section-subtitle">
+            As specialized petrol pump contractors, we deliver complete turnkey solutions for your fuel station infrastructure needs.
+          </p>
           <div className={styles.whyChooseUs}>
             <div className={styles.feature}>
               <span className={styles.featureNumber}>01</span>
-              <h3 className={styles.featureTitle}>Premium Quality</h3>
-              <p>We use only the best materials for long-lasting durability.</p>
+              <h3 className={styles.featureTitle}>Complete Petrol Pump Setup</h3>
+              <p>End-to-end contractor services for new petrol pump installations - from canopy structures to electrical panels and lighting systems.</p>
             </div>
             <div className={styles.feature}>
               <span className={styles.featureNumber}>02</span>
-              <h3 className={styles.featureTitle}>Expert Team</h3>
-              <p>Our professionals have years of experience in the industry.</p>
+              <h3 className={styles.featureTitle}>Weather Protection Expertise</h3>
+              <p>Our canopy designs shield customers and equipment from sun, rain, and harsh weather while ensuring safety and durability.</p>
             </div>
             <div className={styles.feature}>
               <span className={styles.featureNumber}>03</span>
-              <h3 className={styles.featureTitle}>On-Time Delivery</h3>
-              <p>We value your time and ensure projects are completed on schedule.</p>
+              <h3 className={styles.featureTitle}>Premium Materials</h3>
+              <p>We use high-grade steel, aluminum frames, and weather-resistant roofing materials (metal sheeting, fiberglass, polycarbonate) for long-lasting performance.</p>
             </div>
             <div className={styles.feature}>
               <span className={styles.featureNumber}>04</span>
-              <h3 className={styles.featureTitle}>Modern Design</h3>
-              <p>Aesthetically pleasing designs that stand out.</p>
+              <h3 className={styles.featureTitle}>Custom Design & Branding</h3>
+              <p>Flat, sloped, or curved canopy designs integrated with your brand signage, LED lighting, and promotional displays for maximum visibility.</p>
+            </div>
+            <div className={styles.feature}>
+              <span className={styles.featureNumber}>05</span>
+              <h3 className={styles.featureTitle}>Safety Compliant</h3>
+              <p>All installations meet safety standards, providing secure fueling environments with proper electrical grounding and fire-resistant materials.</p>
+            </div>
+            <div className={styles.feature}>
+              <span className={styles.featureNumber}>06</span>
+              <h3 className={styles.featureTitle}>Timely Project Delivery</h3>
+              <p>We understand your business needs - our experienced team completes installations on schedule without compromising quality.</p>
             </div>
           </div>
         </div>

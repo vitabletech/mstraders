@@ -1,9 +1,13 @@
+import { Suspense } from 'react';
 import styles from './contact.module.css';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-    title: "Contact Us | MS Traders",
-    description: "Get in touch with MS Traders for quotes and enquiries about our services.",
+    title: "Contact MS Traders | Get a Quote Today",
+    description: "Contact MS Traders for enquiries about Petrol Pump Canopies, Pavers, and Industrial Solutions. Call +91-8959014819 or WhatsApp us.",
+    alternates: {
+        canonical: '/contact',
+    },
 };
 
 export default function Contact() {
@@ -40,7 +44,7 @@ export default function Contact() {
                         <div className={styles.icon}>✉️</div>
                         <div className={styles.details}>
                             <h3>Email Us</h3>
-                            <p>info@mstraders.com</p>
+                            <p>info@vitabletech.in</p>
                         </div>
                     </div>
 
@@ -48,13 +52,15 @@ export default function Contact() {
                         <div className={styles.icon}>⏰</div>
                         <div className={styles.details}>
                             <h3>Opening Hours</h3>
-                            <p>10:30 AM - 6:00 PM</p>
+                            <p>10:30 AM - 10:00 PM</p>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <ContactForm />
+                    <Suspense fallback={<div>Loading form...</div>}>
+                        <ContactForm />
+                    </Suspense>
                 </div>
             </div>
         </>
